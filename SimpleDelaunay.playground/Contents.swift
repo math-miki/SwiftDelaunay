@@ -1,10 +1,12 @@
 import Foundation
 import simd
+import UIKit
 
 // -------------------- MAIN -------------------- //
 
 func main() {
-    
+    let image = UIImage(named: "miki.png")
+    print(image)
 }
 
 // -------------------- CORE -------------------- //
@@ -16,35 +18,37 @@ func Triangultion() {
 
 // -------------------- FUNCTIONS -------------------- //
 
-func getCircumscrivedCircle(of t: Triangle) {
-    let x1 = t.p1.x;
-    let y1 = t.p1.y;
-    let x2 = t.p2.x;
-    let y2 = t.p2.y;
-    let x3 = t.p3.x;
-    let y3 = t.p3.y;
+func getCircumscrivedCircle(of t: Triangle) -> Circle {
+    let x1 = t.p1.x
+    let y1 = t.p1.y
+    let x2 = t.p2.x
+    let y2 = t.p2.y
+    let x3 = t.p3.x
+    let y3 = t.p3.y
 
-    let x12 = x1-x2;
-    let x13 = x1-x3;
-    let y12 = y1-y2;
-    let y13 = y1-y3;
-    let z21 = x2*x2 + y2*y2 - x1*x1 - y1*y1;
-    let z31 = x3*x3 + y3*y3 - x1*x1 - y1*y1;
-    let l = (y12*z31 - y13*z21) / (x13*y12 - x12*y13);
-    let m = (z21 - x12*l)/y12;
-    let n = -1*(x1*x1 + y1*y1 + x1*l + y1*m);
-    let cx = -1*l/2.0;
-    let cy = -1*m/2.0;
-    let r = sqrt((l*l + m*m)/4.0 - n);
+    let x12 = x1-x2
+    let x13 = x1-x3
+    let y12 = y1-y2
+    let y13 = y1-y3
+    let z21 = x2*x2 + y2*y2 - x1*x1 - y1*y1
+    let z31 = x3*x3 + y3*y3 - x1*x1 - y1*y1
+    let l = (y12*z31 - y13*z21) / (x13*y12 - x12*y13)
+    let m = (z21 - x12*l)/y12
+    let n = -1*(x1*x1 + y1*y1 + x1*l + y1*m)
+    let cx = -1*l/2.0
+    let cy = -1*m/2.0
+    let r = sqrt((l*l + m*m)/4.0 - n)
 
-    return Circle(center: Point(cx, cy), radius: r);
+    return Circle(center: Point(cx, cy), radius: r)
 }
 
-func getBaseTriangle(width w: Int, height h: Int) {
-    let r = sqrt(w*w/4.0 + h*h/4.0);
-    let l = 2*r*sqrt(3);
-    return Triangle(Point(w/2.0, h/2.0 + r - sqrt(3)*l/2.0), Point((w-l)/2.0,h/2.0+r), Point((w+l)/2.0,h/2.0+r));
-
+func getBaseTriangle(width w: Float, height h: Float) -> Triangle {
+    let r: Float = sqrt(w*w/4.0 + h*h/4.0)
+    let l = 2*r*sqrt(3)
+//    let p1 = Point(w/2.0, h/2.0 + r - sqrt(3)*l/2.0)
+//    let p2 = Point((w-l)/2.0,h/2.0+r)
+//    let p3 = Point((w+l)/2.0,h/2.0+r)
+    return Triangle(Point(w/2.0, h/2.0 + r - sqrt(3)*l/2.0), Point((w-l)/2.0,h/2.0+r), Point((w+l)/2.0,h/2.0+r))
 }
 
 // -------------------- STRUCTURES -------------------- //
@@ -108,3 +112,5 @@ struct Triangle: Figure, Hashable {
         hasher.combine(p3)
     }
 }
+
+main()
