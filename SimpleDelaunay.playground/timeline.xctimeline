@@ -3,7 +3,17 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/miki/Develop/Delaunay/SwiftDelaunay/SimpleDelaunay.playground#CharacterRangeLen=12&amp;CharacterRangeLoc=160&amp;EndingColumnNumber=0&amp;EndingLineNumber=9&amp;StartingColumnNumber=5&amp;StartingLineNumber=8&amp;Timestamp=603403656.001763"
+         documentLocation = "file:///Users/miki/Develop/Delaunay/SwiftDelaunay/SimpleDelaunay.playground#CharacterRangeLen=1491&amp;CharacterRangeLoc=1310&amp;EndingColumnNumber=79&amp;EndingLineNumber=71&amp;StartingColumnNumber=44&amp;StartingLineNumber=37&amp;Timestamp=603417687.599766"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/miki/Develop/Delaunay/SwiftDelaunay/SimpleDelaunay.playground#CharacterRangeLen=7&amp;CharacterRangeLoc=7497&amp;EndingColumnNumber=30&amp;EndingLineNumber=228&amp;StartingColumnNumber=23&amp;StartingLineNumber=228&amp;Timestamp=603417687.599914"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/miki/Develop/Delaunay/SwiftDelaunay/SimpleDelaunay.playground#CharacterRangeLen=1491&amp;CharacterRangeLoc=1310&amp;EndingColumnNumber=79&amp;EndingLineNumber=71&amp;StartingColumnNumber=44&amp;StartingLineNumber=37&amp;Timestamp=603417687.6000299"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
